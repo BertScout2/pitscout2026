@@ -7,48 +7,104 @@
         <VerticalStackLayout>
             <HorizontalStackLayout>
                 <Label
-                 Text="Preferred Placement on the Field?"   
+                Text="Preferred Placement on the Field?"   
+            />
+                <Button
+                Text="Left"
                 />
+                <Button
+Text="Middle"
+/>
+                <Button
+Text="Right"
+/>
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
      Text="Can You Climb in Auto?"   
+    />
+                <Button
+    Text="Yes"
+    />
+                <Button
+    Text="No"
     />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
      Text="Can You Shoot in Auto?"   
     />
+                <Button
+Text="Yes"
+/>
+                <Button
+Text="No"
+/>
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
      Text="What's Your Best Auto?"   
     />
+                <Entry
+                    Text=""
+                    WidthRequest="250"
+                    MaxLength="100"
+                    />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
      Text="Max Fuel Capacity?"   
+    />
+                <Entry
+    Text=""
+    WidthRequest="50"
+    MaxLength="2"
+                    Keyboard="Numeric"
     />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
      Text="Can You Climb?"   
     />
+                <Button
+Text="Yes"
+/>
+                <Button
+Text="No"
+/>
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
      Text="What Are Your Strengths?"   
     />
+                <Entry
+                    Text=""
+                    WidthRequest="250"
+                    MaxLength="100"
+                    />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
      Text="What's Your Fuel/Points Per Second?"   
+
     />
+                <Entry
+  Text=""
+  WidthRequest="50"
+  MaxLength="2"
+                  Keyboard="Numeric"
+  />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
      Text="Preferred Travel Route?"   
     />
+                <Button
+Text="Over"
+/>
+                <Button
+Text="Under"
+/>
             </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
