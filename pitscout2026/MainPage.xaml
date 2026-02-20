@@ -15,16 +15,19 @@
                     x:Name="Drive_Train_Swerve"
                    Text="Swerve"
                     Clicked="Drive_Train_Swerve_Clicked"
+                    BackgroundColor="Gray"
                    />
                 <Button
                     x:Name="Drive_Train_Tank"
                    Text="Tank"
                     Clicked="Drive_Train_Tank_Clicked"
+                    BackgroundColor="Gray"
                    />
                 <Button
                     x:Name="Drive_Train_Other"
                    Text="Other"
                     Clicked="Drive_Train_Other_Clicked"
+                    BackgroundColor="Gray"
                    />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
@@ -35,21 +38,25 @@
                     x:Name="Preferred_Placement_Left"
                    Text="Left"
                     Clicked="Preferred_Placement_Left_Clicked"
+                    BackgroundColor="Gray"
                    />
                 <Button
                     x:Name="Preferred_Placement_Middle"
                    Text="Middle"
                     Clicked="Preferred_Placement_Middle_Clicked"
+                    BackgroundColor="Gray"
                    />
                 <Button
                     x:Name="Preferred_Placement_Right"
                    Text="Right"
                     Clicked="Preferred_Placement_Right_Clicked"
+                    BackgroundColor="Gray"
                    />
                 <Button
                     x:Name="Preferred_Placement_None"
                     Text="None"
                     Clicked="Preferred_Placement_None_Clicked"
+                    BackgroundColor="Gray"
                    />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
@@ -60,11 +67,13 @@
                     x:Name="Auto_Climb_Yes"
                     Text="Yes"
                     Clicked="Auto_Climb_Yes_Clicked"
+                    BackgroundColor="Gray"
                     />
                 <Button
                     x:Name="Auto_Climb_No"
                     Text="No"
                     Clicked="Auto_Climb_No_Clicked"
+                    BackgroundColor="Gray"
                     />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
@@ -75,11 +84,13 @@
                     x:Name="Auto_Shoot_Yes"
                     Text="Yes"
                     Clicked="Auto_Shoot_Yes_Clicked"
+                    BackgroundColor="Gray"
                     />
                 <Button
                     x:Name="Auto_Shoot_No"
                     Text="No"
                     Clicked="Auto_Shoot_No_Clicked"
+                    BackgroundColor="Gray"
                     />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
@@ -87,9 +98,11 @@
                     Text="What's Your Best Auto?"   
                     />
                 <Entry
+                    x:Name="Best_Auto"
                     Text=""
                     WidthRequest="250"
                     MaxLength="100"
+                    TextChanged="Best_Auto_TextChanged"
                     />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
@@ -97,10 +110,12 @@
                     Text="Max Fuel Capacity?"   
                     />
                 <Entry
+                     x:Name="Max_Fuel"
                     Text=""
                     WidthRequest="50"
                     MaxLength="2"
                     Keyboard="Numeric"
+                    TextChanged="Max_Fuel_TextChanged"
                     />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
@@ -111,11 +126,13 @@
                     x:Name="Can_Climb_Yes"
                     Text="Yes"
                     Clicked="Can_Climb_Yes_Clicked"
+                    BackgroundColor="Gray"
                     />
                 <Button
                     x:Name="Can_Climb_No"
                     Text="No"
                     Clicked="Can_Climb_No_Clicked"
+                    BackgroundColor="Gray"
                     />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
@@ -159,10 +176,12 @@
 
                     />
                 <Entry
+                    x:Name="Fps"
                     Text=""
                     WidthRequest="50"
                     MaxLength="2"
                     Keyboard="Numeric"
+                    TextChanged="Fps_TextChanged"
                     />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
@@ -173,16 +192,19 @@
                     x:Name="Travel_Route_Over"
                     Text="Over"
                     Clicked="Travel_Route_Over_Clicked"
+                    BackgroundColor="Gray"
                     />
                 <Button
                     x:Name="Travel_Route_Under"
                     Text="Under"
                     Clicked="Travel_Route_Under_Clicked"
+                    BackgroundColor="Gray"
                     />
                 <Button
                     x:Name="Travel_Route_Both"
                     Text="Both"
                     Clicked="Travel_Route_Both_Clicked"
+                    BackgroundColor="Gray"
                     />
             </HorizontalStackLayout>
         </VerticalStackLayout>
