@@ -9,7 +9,7 @@
         <VerticalStackLayout>
             <HorizontalStackLayout>
                 <Label
-                    Text="What is your drive train?"   
+                    Text="What Is Your Drive Train?"   
                     />
                 <Button
                    Text="Swerve"
