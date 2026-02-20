@@ -4,9 +4,9 @@
     {
         public int Drive_Train { get; set; } = 0;
         public int Preferred_Placement { get; set; } = 0;
-        public bool Climb_Auto { get; set; } = false;
-        public bool Shoot_Auto { get; set; } = false;
-        public string Best_Auto { get; set; } = string.Empty;
+        public bool Auto_Climb { get; set; } = false;
+        public bool Auto_Shoot { get; set; } = false;
+        public string Auto_Best { get; set; } = string.Empty;
         public int Max_Fuel { get; set; } = 0;
         public bool Can_Climb { get; set; } = false;
         public string Strength { get; set; } = string.Empty;

@@ -12,13 +12,19 @@
                     Text="What Is Your Drive Train?"   
                     />
                 <Button
+                    x:Name="Drive_Train_Swerve"
                    Text="Swerve"
+                    Clicked="Drive_Train_Swerve_Clicked"
                    />
                 <Button
+                    x:Name="Drive_Train_Tank"
                    Text="Tank"
+                    Clicked="Drive_Train_Tank_Clicked"
                    />
                 <Button
+                    x:Name="Drive_Train_Other"
                    Text="Other"
+                    Clicked="Drive_Train_Other_Clicked"
                    />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
@@ -26,13 +32,24 @@
                    Text="Preferred Placement on the Field?"   
                    />
                 <Button
+                    x:Name="Preferred_Placement_Left"
                    Text="Left"
+                    Clicked="Preferred_Placement_Left_Clicked"
                    />
                 <Button
+                    x:Name="Preferred_Placement_Middle"
                    Text="Middle"
+                    Clicked="Preferred_Placement_Middle_Clicked"
                    />
                 <Button
+                    x:Name="Preferred_Placement_Right"
                    Text="Right"
+                    Clicked="Preferred_Placement_Right_Clicked"
+                   />
+                <Button
+                    x:Name="Preferred_Placement_None"
+                    Text="None"
+                    Clicked="Preferred_Placement_None_Clicked"
                    />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
@@ -40,10 +57,14 @@
                     Text="Can You Climb in Auto?"   
                     />
                 <Button
+                    x:Name="Auto_Climb_Yes"
                     Text="Yes"
+                    Clicked="Auto_Climb_Yes_Clicked"
                     />
                 <Button
+                    x:Name="Auto_Climb_No"
                     Text="No"
+                    Clicked="Auto_Climb_No_Clicked"
                     />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
@@ -51,10 +72,14 @@
                     Text="Can You Shoot in Auto?"   
                     />
                 <Button
+                    x:Name="Auto_Shoot_Yes"
                     Text="Yes"
+                    Clicked="Auto_Shoot_Yes_Clicked"
                     />
                 <Button
+                    x:Name="Auto_Shoot_No"
                     Text="No"
+                    Clicked="Auto_Shoot_No_Clicked"
                     />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
@@ -83,10 +108,14 @@
                     Text="Can You Climb?"   
                     />
                 <Button
+                    x:Name="Can_Climb_Yes"
                     Text="Yes"
+                    Clicked="Can_Climb_Yes_Clicked"
                     />
                 <Button
+                    x:Name="Can_Climb_No"
                     Text="No"
+                    Clicked="Can_Climb_No_Clicked"
                     />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
@@ -141,10 +170,19 @@
                     Text="Preferred Travel Route?"   
                     />
                 <Button
+                    x:Name="Travel_Route_Over"
                     Text="Over"
+                    Clicked="Travel_Route_Over_Clicked"
                     />
                 <Button
+                    x:Name="Travel_Route_Under"
                     Text="Under"
+                    Clicked="Travel_Route_Under_Clicked"
+                    />
+                <Button
+                    x:Name="Travel_Route_Both"
+                    Text="Both"
+                    Clicked="Travel_Route_Both_Clicked"
                     />
             </HorizontalStackLayout>
         </VerticalStackLayout>
