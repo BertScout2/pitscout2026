@@ -29,22 +29,22 @@ namespace pitscout2026
 
         private void Preferred_Placement_Left_Clicked(object? sender, EventArgs e)
         {
-            pitscout.Preferred_Placement = 1;
+            Set_Preferred_Placement(1);
         }
 
         private void Preferred_Placement_Middle_Clicked(object? sender, EventArgs e)
         {
-            pitscout.Preferred_Placement = 2;
+            Set_Preferred_Placement(2);
         }
 
         private void Preferred_Placement_Right_Clicked(object? sender, EventArgs e)
         {
-            pitscout.Preferred_Placement = 3;
+            Set_Preferred_Placement(3);
         }
 
         private void Preferred_Placement_None_Clicked(object? sender, EventArgs e)
         {
-            pitscout.Preferred_Placement = 0;
+            Set_Preferred_Placement(0);
         }
 
         private void Auto_Climb_Yes_Clicked(object? sender, EventArgs e)
@@ -131,6 +131,46 @@ namespace pitscout2026
             }
         }
 
+        private void Climb_Level_1_Clicked(object? sender, EventArgs e)
+        {
+            pitscout.Climb_Level = 1;
+        }
+
+        private void Climb_Level_2_Clicked(object? sender, EventArgs e)
+        {
+            pitscout.Climb_Level = 2;
+        }
+
+        private void Climb_Level_3_Clicked(object? sender, EventArgs e)
+        {
+            pitscout.Climb_Level = 3;
+        }
+
+        private void Climb_Level_None_Clicked(object? sender, EventArgs e)
+        {
+            pitscout.Climb_Level = 0;
+        }
+
+        private void Climb_Loc_None_Clicked(object? sender, EventArgs e)
+        {
+            pitscout.Climb_Loc = 0;
+        }
+
+        private void Climb_Loc_Middle_Clicked(object? sender, EventArgs e)
+        {
+            pitscout.Climb_Loc = 1;
+        }
+
+        private void Climb_Loc_Side_Clicked(object? sender, EventArgs e)
+        {
+            pitscout.Climb_Loc = 2;
+        }
+
+        private void Climb_Loc_Both_Clicked(object? sender, EventArgs e)
+        {
+            pitscout.Climb_Loc = 3;
+        }
+
         #region setRoutines
         private void Set_Drive_Train(int value)
         {
@@ -139,6 +179,15 @@ namespace pitscout2026
             Drive_Train_Tank.BackgroundColor = value == 2 ? Colors.Green : Colors.Gray;
             Drive_Train_Other.BackgroundColor = value == 3 ? Colors.Green : Colors.Gray;
         }
+        private void Set_Preferred_Placement(int value)
+        {
+            pitscout.Preferred_Placement = value;
+            Preferred_Placement_Left.BackgroundColor = value == 1 ? Colors.Green : Colors.Gray;
+            Preferred_Placement_Middle.BackgroundColor = value == 2 ? Colors.Green : Colors.Gray;
+            Preferred_Placement_Right.BackgroundColor = value == 3 ? Colors.Green : Colors.Gray;
+            Preferred_Placement_None.BackgroundColor = value == 0 ? Colors.Green : Colors.Gray;
+        }
         #endregion
+
     }
 }

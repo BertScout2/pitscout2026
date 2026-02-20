@@ -140,13 +140,28 @@
                     Text="What Level?"   
                     />
                 <Button
+                    x:Name="Climb_Level_1"
                     Text="1"
+                    Clicked="Climb_Level_1_Clicked"
+                    BackgroundColor="Gray"
                     />
                 <Button
+                    x:Name="Climb_Level_2"
                     Text="2"
+                    Clicked="Climb_Level_2_Clicked"
+                    BackgroundColor="Gray"
                     />
                 <Button
+                    x:Name="Climb_Level_3"
                     Text="3"
+                    Clicked="Climb_Level_3_Clicked"
+                    BackgroundColor="Gray"
+                    />
+                <Button
+                    x:Name="Climb_Level_None"
+                    Text="None"
+                    Clicked="Climb_Level_None_Clicked"
+                    BackgroundColor="Gray"
                     />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
@@ -154,10 +169,28 @@
                     Text="Middle or Side Climb?"   
                     />
                 <Button
-                    Text="Middle"
+                    x:Name="Climb_Loc_None"
+                    Text="None"
+                    Clicked="Climb_Loc_None_Clicked"
+                    BackgroundColor="Gray"
                     />
                 <Button
+                    x:Name="Climb_Loc_Middle"
+                    Text="Middle"
+                    Clicked="Climb_Loc_Middle_Clicked"
+                    BackgroundColor="Gray"
+                    />
+                <Button
+                    x:Name="Climb_Loc_Side"
                     Text="Side"
+                    Clicked="Climb_Loc_Side_Clicked"
+                    BackgroundColor="Gray"
+                    />
+                <Button
+                    x:Name="Climb_Loc_Both"
+                    Text="Both"
+                    Clicked="Climb_Loc_Both_Clicked"
+                    BackgroundColor="Gray"
                     />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
