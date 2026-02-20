@@ -1,50 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="pitscout2026.MainPage">
+<ContentPage
+    x:DataType="ContentPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="pitscout2026.MainPage">
 
     <ScrollView>
         <VerticalStackLayout>
             <HorizontalStackLayout>
                 <Label
-                Text="Preferred Placement on the Field?"   
-            />
+                    Text="What is your drive train?"   
+                    />
                 <Button
-                Text="Left"
-                />
+                   Text="Swerve"
+                   />
                 <Button
-Text="Middle"
-/>
+                   Text="Tank"
+                   />
                 <Button
-Text="Right"
-/>
+                   Text="Other"
+                   />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
-     Text="Can You Climb in Auto?"   
-    />
+                   Text="Preferred Placement on the Field?"   
+                   />
                 <Button
-    Text="Yes"
-    />
+                   Text="Left"
+                   />
                 <Button
-    Text="No"
-    />
+                   Text="Middle"
+                   />
+                <Button
+                   Text="Right"
+                   />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
-     Text="Can You Shoot in Auto?"   
-    />
+                    Text="Can You Climb in Auto?"   
+                    />
                 <Button
-Text="Yes"
-/>
+                    Text="Yes"
+                    />
                 <Button
-Text="No"
-/>
+                    Text="No"
+                    />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
-     Text="What's Your Best Auto?"   
-    />
+                    Text="Can You Shoot in Auto?"   
+                    />
+                <Button
+                    Text="Yes"
+                    />
+                <Button
+                    Text="No"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label
+                    Text="What's Your Best Auto?"   
+                    />
                 <Entry
                     Text=""
                     WidthRequest="250"
@@ -53,30 +69,55 @@ Text="No"
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
-     Text="Max Fuel Capacity?"   
-    />
+                    Text="Max Fuel Capacity?"   
+                    />
                 <Entry
-    Text=""
-    WidthRequest="50"
-    MaxLength="2"
+                    Text=""
+                    WidthRequest="50"
+                    MaxLength="2"
                     Keyboard="Numeric"
-    />
+                    />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
-     Text="Can You Climb?"   
-    />
+                    Text="Can You Climb?"   
+                    />
                 <Button
-Text="Yes"
-/>
+                    Text="Yes"
+                    />
                 <Button
-Text="No"
-/>
+                    Text="No"
+                    />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
-     Text="What Are Your Strengths?"   
-    />
+                    Text="What Level?"   
+                    />
+                <Button
+                    Text="1"
+                    />
+                <Button
+                    Text="2"
+                    />
+                <Button
+                    Text="3"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label
+                    Text="Middle or Side Climb?"   
+                    />
+                <Button
+                    Text="Middle"
+                    />
+                <Button
+                    Text="Side"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label
+                    Text="What Are Your Strengths?"   
+                    />
                 <Entry
                     Text=""
                     WidthRequest="250"
@@ -85,26 +126,26 @@ Text="No"
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
-     Text="What's Your Fuel/Points Per Second?"   
+                    Text="What's Your Fuel/Points Per Second?"   
 
-    />
+                    />
                 <Entry
-  Text=""
-  WidthRequest="50"
-  MaxLength="2"
-                  Keyboard="Numeric"
-  />
+                    Text=""
+                    WidthRequest="50"
+                    MaxLength="2"
+                    Keyboard="Numeric"
+                    />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
-     Text="Preferred Travel Route?"   
-    />
+                    Text="Preferred Travel Route?"   
+                    />
                 <Button
-Text="Over"
-/>
+                    Text="Over"
+                    />
                 <Button
-Text="Under"
-/>
+                    Text="Under"
+                    />
             </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
