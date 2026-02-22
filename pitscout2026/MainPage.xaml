@@ -9,6 +9,19 @@
         <VerticalStackLayout>
             <HorizontalStackLayout>
                 <Label
+                    Text="Team #:"
+                    />
+                <Entry
+                    x:Name="Team_Num"
+                   Text=""
+                    WidthRequest="75"
+                    MaxLength="5"
+                    Keyboard="Numeric"
+                    TextChanged="Team_Num_TextChanged"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label
                     Text="What Is Your Drive Train?"   
                     />
                 <Button
@@ -23,12 +36,17 @@
                     Clicked="Drive_Train_Tank_Clicked"
                     BackgroundColor="Gray"
                    />
-                <Button
+                <Label
                     x:Name="Drive_Train_Other"
-                   Text="Other"
-                    Clicked="Drive_Train_Other_Clicked"
-                    BackgroundColor="Gray"
+                   Text="Other:"
                    />
+                <Entry
+                    x:Name="Drive_Train_Write"
+                    Text=""
+                    WidthRequest="150"
+                    MaxLength="100"
+                    TextChanged="Drive_Train_Write_TextChanged"
+                    />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
@@ -50,12 +68,6 @@
                     x:Name="Preferred_Placement_Right"
                    Text="Right"
                     Clicked="Preferred_Placement_Right_Clicked"
-                    BackgroundColor="Gray"
-                   />
-                <Button
-                    x:Name="Preferred_Placement_None"
-                    Text="None"
-                    Clicked="Preferred_Placement_None_Clicked"
                     BackgroundColor="Gray"
                    />
             </HorizontalStackLayout>
@@ -113,7 +125,7 @@
                      x:Name="Max_Fuel"
                     Text=""
                     WidthRequest="50"
-                    MaxLength="2"
+                    MaxLength="3"
                     Keyboard="Numeric"
                     TextChanged="Max_Fuel_TextChanged"
                     />
@@ -169,12 +181,6 @@
                     Text="Middle or Side Climb?"   
                     />
                 <Button
-                    x:Name="Climb_Loc_None"
-                    Text="None"
-                    Clicked="Climb_Loc_None_Clicked"
-                    BackgroundColor="Gray"
-                    />
-                <Button
                     x:Name="Climb_Loc_Middle"
                     Text="Middle"
                     Clicked="Climb_Loc_Middle_Clicked"
@@ -190,6 +196,12 @@
                     x:Name="Climb_Loc_Both"
                     Text="Both"
                     Clicked="Climb_Loc_Both_Clicked"
+                    BackgroundColor="Gray"
+                    />
+                <Button
+                    x:Name="Climb_Loc_None"
+                    Text="None"
+                    Clicked="Climb_Loc_None_Clicked"
                     BackgroundColor="Gray"
                     />
             </HorizontalStackLayout>
@@ -240,6 +252,22 @@
                     BackgroundColor="Gray"
                     />
             </HorizontalStackLayout>
+            <Grid
+                HorizontalOptions="Fill" >
+                <Editor
+                    x:Name="Comments"
+                    Grid.Row="0"
+                    Placeholder="Put in Comments..."
+                    PlaceholderColor="LightGray"
+                    HorizontalOptions="Fill"
+                    MaxLength="250"
+                    Margin="10,5,10,10"
+                    Text=""
+                    IsEnabled="True"
+                    FontSize="{OnPlatform WinUI=Small, Android=Medium}"
+                    TextChanged="Comments_TextChanged"
+                    />
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>
 
