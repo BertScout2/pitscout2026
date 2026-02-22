@@ -21,10 +21,25 @@
         public static string CreateTableCommand()
         {
             return
-                @"CREATE TABLE ""pitScout""(
-                ""Id""    INTEGER,
-                ""Team_Num""  INTEGER,
-                PRIMARY KEY(""Id"" AUTOINCREMENT)
+                @"CREATE TABLE pitScout(
+                Id    INTEGER,
+                Team_Num  INTEGER,
+                Drive_Train INTEGER,
+                Preferred_Placement_Left INTEGER,
+                Preferred_Placement_Middle INTEGER,
+                Preferred_Placement_Right INTEGER,
+                Auto_Climb INTEGER,
+                Auto_Shoot INTEGER,
+                Auto_Best TEXT,
+                Max_Fuel INTEGER,
+                Can_Climb INTEGER,
+                Climb_Level INTEGER,
+                Climb_Loc INTEGER,
+                Strength TEXT,
+                Fps INTEGER,
+                Travel_Route INTEGER,
+                Comments TEXT,
+                PRIMARY KEY(Id AUTOINCREMENT)
                 );";
         }
     }

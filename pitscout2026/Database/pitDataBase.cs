@@ -17,7 +17,7 @@ namespace pitscout2026.Database
         }
         public async Task Init()
         {
-            databasePath = Path.Combine("C:\\Temp", PitDBFilename);
+            databasePath = "Data Source=" + Path.Combine("C:\\Temp", PitDBFilename);
             Database = new SqliteConnection(databasePath);
             await Database.OpenAsync();
             var createTableCmd = Database.CreateCommand();
