@@ -19,6 +19,24 @@
                     Keyboard="Numeric"
                     TextChanged="Team_Num_TextChanged"
                     />
+                <Button
+                    x:Name="Load_But"
+                    Text="Load"
+                    Clicked="Load_But_Clicked"
+                    BackgroundColor="Gray"
+                    />
+                <Button
+                    x:Name="Save_But"
+                    Text="Save"
+                    Clicked="Save_But_Clicked"
+                    BackgroundColor="Gray"
+                    />
+                <Button
+                    x:Name="Init_Data"
+                    Text="Init Database"
+                    Clicked="Init_Data_Clicked"
+                    BackgroundColor="Gray"
+                    />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label

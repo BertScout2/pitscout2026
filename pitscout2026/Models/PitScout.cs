@@ -18,5 +18,14 @@
         public int Fps { get; set; } = 0;
         public int Travel_Route { get; set; } = 0;
         public string Comments { get; set; } = string.Empty;
+        public static string CreateTableCommand()
+        {
+            return
+                @"CREATE TABLE ""pitScout""(
+                ""Id""    INTEGER,
+                ""Team_Num""  INTEGER,
+                PRIMARY KEY(""Id"" AUTOINCREMENT)
+                );";
+        }
     }
 }

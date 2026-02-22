@@ -1,10 +1,12 @@
-﻿using pitscout2026.Models;
+﻿using pitscout2026.Database;
+using pitscout2026.Models;
 
 namespace pitscout2026
 {
     public partial class MainPage : ContentPage
     {
         private readonly PitScout pitscout = new();
+        private readonly pitDataBase db = new();
 
         public MainPage()
         {
@@ -25,6 +27,20 @@ namespace pitscout2026
             {
                 Team_Num.Text = pitscout.Team_Num.ToString();
             }
+        }
+        private void Load_But_Clicked(object? sender, EventArgs e)
+        {
+
+        }
+
+        private void Save_But_Clicked(object? sender, EventArgs e)
+        {
+
+        }
+        private void Init_Data_Clicked(object? sender, EventArgs e)
+        {
+            var taskInit = Task.Run(()=>db.Init());
+            taskInit.Wait();
         }
         private void Drive_Train_Swerve_Clicked(object? sender, EventArgs e)
         {
