@@ -263,12 +263,12 @@
                     Clicked="Travel_Route_Under_Clicked"
                     BackgroundColor="Gray"
                     />
-                <Button
+                <!-- <Button
                     x:Name="Travel_Route_Both"
                     Text="Both"
                     Clicked="Travel_Route_Both_Clicked"
                     BackgroundColor="Gray"
-                    />
+                    /> -->
             </HorizontalStackLayout>
             <Grid
                 HorizontalOptions="Fill" >

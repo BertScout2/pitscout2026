@@ -107,18 +107,22 @@ namespace pitscout2026
 
         private void Travel_Route_Over_Clicked(object? sender, EventArgs e)
         {
-            Set_Travel_Route(1);
+            pitscout.Travel_Route_Over = !
+                pitscout.Travel_Route_Over;
+            Set_Travel_Route_Over(pitscout.Travel_Route_Over);
         }
 
         private void Travel_Route_Under_Clicked(object? sender, EventArgs e)
         {
-            Set_Travel_Route(2);
+            pitscout.Travel_Route_Under = !
+                pitscout.Travel_Route_Under;
+            Set_Travel_Route_Under(pitscout.Travel_Route_Under);
         }
 
-        private void Travel_Route_Both_Clicked(object? sender, EventArgs e)
-        {
-            Set_Travel_Route(3);
-        }
+        //private void Travel_Route_Both_Clicked(object? sender, EventArgs e)
+        //{
+        //    Set_Travel_Route(3);
+        //}
 
         private void Best_Auto_TextChanged(object? sender, TextChangedEventArgs e)
         {
@@ -237,12 +241,22 @@ namespace pitscout2026
             Auto_Shoot_Yes.BackgroundColor = value ? Colors.Green : Colors.Gray;
             Auto_Shoot_No.BackgroundColor = !value ? Colors.Green : Colors.Gray;
         }
-        private void Set_Travel_Route(int value)
+        //private void Set_Travel_Route(int value)
+        //{
+        //    pitscout.Travel_Route = value;
+        //    Travel_Route_Over.BackgroundColor = value == 1 ? Colors.Green : Colors.Gray;
+        //    Travel_Route_Under.BackgroundColor = value == 2 ? Colors.Green : Colors.Gray;
+        //    Travel_Route_Both.BackgroundColor = value == 3 ? Colors.Green : Colors.Gray;
+        //}
+        private void Set_Travel_Route_Over(bool value)
         {
-            pitscout.Travel_Route = value;
-            Travel_Route_Over.BackgroundColor = value == 1 ? Colors.Green : Colors.Gray;
-            Travel_Route_Under.BackgroundColor = value == 2 ? Colors.Green : Colors.Gray;
-            Travel_Route_Both.BackgroundColor = value == 3 ? Colors.Green : Colors.Gray;
+            pitscout.Travel_Route_Over = value;
+            Travel_Route_Over.BackgroundColor = value ? Colors.Green : Colors.Gray;
+        }
+        private void Set_Travel_Route_Under(bool value)
+        {
+            pitscout.Travel_Route_Under = value;
+            Travel_Route_Under.BackgroundColor = value ? Colors.Green : Colors.Gray;
         }
         private void Set_Can_Climb(bool value)
         {

@@ -18,7 +18,9 @@
         public bool Climb_Loc_Middle { get; set; } = false;
         public string Strength { get; set; } = string.Empty;
         public int Fps { get; set; } = 0;
-        public int Travel_Route { get; set; } = 0;
+        //public int Travel_Route { get; set; } = 0;
+        public bool Travel_Route_Over { get; set; } = false;
+        public bool Travel_Route_Under { get; set; } = false;
         public string Comments { get; set; } = string.Empty;
         public static string CreateTableCommand()
         {
