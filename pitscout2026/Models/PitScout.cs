@@ -13,7 +13,9 @@
         public int Max_Fuel { get; set; } = 0;
         public bool Can_Climb { get; set; } = false;
         public int Climb_Level { get; set; } = 0;
-        public int Climb_Loc { get; set; } = 0;
+        //public int Climb_Loc { get; set; } = 0;
+        public bool Climb_Loc_Side { get; set; } = false;
+        public bool Climb_Loc_Middle { get; set; } = false;
         public string Strength { get; set; } = string.Empty;
         public int Fps { get; set; } = 0;
         public int Travel_Route { get; set; } = 0;

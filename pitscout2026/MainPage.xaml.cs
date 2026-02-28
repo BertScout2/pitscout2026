@@ -181,23 +181,27 @@ namespace pitscout2026
 
         private void Climb_Loc_Middle_Clicked(object? sender, EventArgs e)
         {
-            Set_Climb_Loc(1);
+            pitscout.Climb_Loc_Middle = !
+                pitscout.Climb_Loc_Middle;
+            Set_Climb_Loc_Middle(pitscout.Climb_Loc_Middle);
         }
 
         private void Climb_Loc_Side_Clicked(object? sender, EventArgs e)
         {
-            Set_Climb_Loc(2);
+            pitscout.Climb_Loc_Side = !
+                pitscout.Climb_Loc_Side;
+            Set_Climb_Loc_Side(pitscout.Climb_Loc_Side);
         }
 
-        private void Climb_Loc_Both_Clicked(object? sender, EventArgs e)
-        {
-            Set_Climb_Loc(3);
-        }
+        //private void Climb_Loc_Both_Clicked(object? sender, EventArgs e)
+        //{
+        //    Set_Climb_Loc(3);
+        //}
 
-        private void Climb_Loc_None_Clicked(object? sender, EventArgs e)
-        {
-            Set_Climb_Loc(0);
-        }
+        //private void Climb_Loc_None_Clicked(object? sender, EventArgs e)
+        //{
+        //    Set_Climb_Loc(0);
+        //}
 
         #region setRoutines
         private void Set_Drive_Train(int value)
@@ -254,13 +258,23 @@ namespace pitscout2026
             Climb_Level_3.BackgroundColor = value == 3 ? Colors.Green : Colors.Gray;
             Climb_Level_None.BackgroundColor = value == 0 ? Colors.Green : Colors.Gray;
         }
-        private void Set_Climb_Loc(int value)
+        //private void Set_Climb_Loc(int value)
+        //{
+        //    pitscout.Climb_Loc = value;
+        //    Climb_Loc_Middle.BackgroundColor = value == 1 ? Colors.Green : Colors.Gray;
+        //    Climb_Loc_Side.BackgroundColor = value == 2 ? Colors.Green : Colors.Gray;
+        //    Climb_Loc_Both.BackgroundColor = value == 3 ? Colors.Green : Colors.Gray;
+        //    Climb_Loc_None.BackgroundColor = value == 0 ? Colors.Green : Colors.Gray;
+        //}
+        private void Set_Climb_Loc_Middle(bool value)
         {
-            pitscout.Climb_Loc = value;
-            Climb_Loc_Middle.BackgroundColor = value == 1 ? Colors.Green : Colors.Gray;
-            Climb_Loc_Side.BackgroundColor = value == 2 ? Colors.Green : Colors.Gray;
-            Climb_Loc_Both.BackgroundColor = value == 3 ? Colors.Green : Colors.Gray;
-            Climb_Loc_None.BackgroundColor = value == 0 ? Colors.Green : Colors.Gray;
+            pitscout.Climb_Loc_Middle = value;
+            Climb_Loc_Middle.BackgroundColor = value ? Colors.Green : Colors.Grey;
+        }
+        private void Set_Climb_Loc_Side(bool value)
+        {
+            pitscout.Climb_Loc_Side = value;
+            Climb_Loc_Side.BackgroundColor = value ? Colors.Green : Colors.Grey;
         }
 
         #endregion

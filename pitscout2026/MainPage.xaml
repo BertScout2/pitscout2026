@@ -210,7 +210,7 @@
                     Clicked="Climb_Loc_Side_Clicked"
                     BackgroundColor="Gray"
                     />
-                <Button
+                <!--<Button
                     x:Name="Climb_Loc_Both"
                     Text="Both"
                     Clicked="Climb_Loc_Both_Clicked"
@@ -221,7 +221,7 @@
                     Text="None"
                     Clicked="Climb_Loc_None_Clicked"
                     BackgroundColor="Gray"
-                    />
+                    /> -->
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
