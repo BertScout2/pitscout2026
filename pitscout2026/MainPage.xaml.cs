@@ -35,7 +35,8 @@ namespace pitscout2026
 
         private void Save_But_Clicked(object? sender, EventArgs e)
         {
-
+            var taskSave = Task.Run(() => db.SavePitScoutItemAsync(pitscout));
+            taskSave.Wait();
         }
         private void Init_Data_Clicked(object? sender, EventArgs e)
         {
@@ -206,17 +207,17 @@ namespace pitscout2026
         //{
         //    Set_Climb_Loc(0);
         //}
-        private void Human_Acc_Low_Clicked(object sender, EventArgs e)
+        private void Human_Acc_Low_Clicked(object? sender, EventArgs e)
         {
             Set_Human_Acc(1);
         }
 
-        private void Human_Acc_Med_Clicked(object sender, EventArgs e)
+        private void Human_Acc_Med_Clicked(object? sender, EventArgs e)
         {
             Set_Human_Acc(2);
         }
 
-        private void Human_Acc_High_Clicked(object sender, EventArgs e)
+        private void Human_Acc_High_Clicked(object? sender, EventArgs e)
         {
             Set_Human_Acc(3);
         }

@@ -2,6 +2,7 @@
 {
     public class PitScout
     {
+        public int Id { get; set; } = 0;
         public int Team_Num { get; set; } = 0;
         public int Drive_Train { get; set; } = 0;
         public bool Preferred_Placement_Left { get; set; } = false;
@@ -21,12 +22,12 @@
         //public int Travel_Route { get; set; } = 0;
         public bool Travel_Route_Over { get; set; } = false;
         public bool Travel_Route_Under { get; set; } = false;
-        public string Comments { get; set; } = string.Empty;
         public int Human_Acc { get; set; } = 0;
+        public string Comments { get; set; } = string.Empty;
         public static string CreateTableCommand()
         {
             return
-                @"CREATE TABLE pitScout(
+                @"CREATE TABLE IF NOT EXISTS pitScout(
                 Id    INTEGER,
                 Team_Num  INTEGER,
                 Drive_Train INTEGER,
@@ -39,13 +40,67 @@
                 Max_Fuel INTEGER,
                 Can_Climb INTEGER,
                 Climb_Level INTEGER,
-                Climb_Loc INTEGER,
+                Climb_Loc_Side INTEGER,
+                Climb_Loc_Middle INTEGER,
                 Strength TEXT,
                 Fps INTEGER,
-                Travel_Route INTEGER,
+                Travel_Route_Over INTEGER,
+                Travel_Route_Under INTEGER,
+                Human_Acc INTEGER,
                 Comments TEXT,
                 PRIMARY KEY(Id AUTOINCREMENT)
                 );";
+        }
+        public static string PitscoutFields()
+        {
+            return
+               @"
+                Team_Num  ,
+                Drive_Train ,
+                Preferred_Placement_Left ,
+                Preferred_Placement_Middle ,
+                Preferred_Placement_Right ,
+                Auto_Climb ,
+                Auto_Shoot ,
+                Auto_Best ,
+                Max_Fuel ,
+                Can_Climb ,
+                Climb_Level ,
+                Climb_Loc_Side ,
+                Climb_Loc_Middle ,
+                Strength ,
+                Fps ,
+                Travel_Route_Over ,
+                Travel_Route_Under ,
+                Human_Acc ,
+                Comments ";
+        }
+        public string AddCommand()
+        {
+            return
+                @$"INSERT INTO pitscout ( {PitscoutFields()}
+) VALUES (
+
+{Team_Num}  ,
+                {Drive_Train} ,
+                {Preferred_Placement_Left} ,
+                {Preferred_Placement_Middle} ,
+                {Preferred_Placement_Right} ,
+                {Auto_Climb} ,
+                {Auto_Shoot} ,
+               '{Auto_Best}' ,
+                {Max_Fuel} ,
+                {Can_Climb} ,
+                {Climb_Level} ,
+                {Climb_Loc_Side} ,
+                {Climb_Loc_Middle} ,
+               '{Strength}' ,
+                {Fps} ,
+                {Travel_Route_Over} ,
+                {Travel_Route_Under} ,
+                {Human_Acc} ,
+               '{Comments}' 
+)";
         }
     }
 }
