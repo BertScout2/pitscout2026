@@ -19,6 +19,7 @@
                     MaxLength="5"
                     Keyboard="Numeric"
                     TextChanged="Team_Num_TextChanged"
+                    Placeholder="133..."
                     />
                 <Button
                     x:Name="Load_But"
@@ -56,17 +57,13 @@
                     Clicked="Drive_Train_Tank_Clicked"
                     BackgroundColor="Gray"
                    />
-                <Label
-                    x:Name="Drive_Train_Other"
-                   Text="Other:"
-                    WidthRequest="75"
-                   />
                 <Entry
                     x:Name="Drive_Train_Write"
                     Text=""
                     WidthRequest="150"
                     MaxLength="100"
                     TextChanged="Drive_Train_Write_TextChanged"
+                    Placeholder="Other..."
                     />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
@@ -137,6 +134,7 @@
                 <Entry
                     x:Name="Best_Auto"
                     Text=""
+                    Placeholder="Tap Here to Start Writing..."
                     WidthRequest="250"
                     MaxLength="100"
                     TextChanged="Best_Auto_TextChanged"
@@ -148,7 +146,7 @@
                     WidthRequest="175"
                     />
                 <Entry
-                     x:Name="Max_Fuel"
+                    x:Name="Max_Fuel"
                     Text=""
                     WidthRequest="50"
                     MaxLength="3"
@@ -243,12 +241,13 @@
                     Text=""
                     WidthRequest="250"
                     MaxLength="100"
+                    Placeholder="Tap Here to Start Writing..."
                     />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
                     Text="What's Your Fuel/Points Per Second?"   
-WidthRequest="260"
+WidthRequest="275"
                     />
                 <Entry
                     x:Name="Fps"
