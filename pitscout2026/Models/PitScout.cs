@@ -22,6 +22,7 @@
         public bool Travel_Route_Over { get; set; } = false;
         public bool Travel_Route_Under { get; set; } = false;
         public string Comments { get; set; } = string.Empty;
+        public int Human_Acc { get; set; } = 0;
         public static string CreateTableCommand()
         {
             return

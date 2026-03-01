@@ -10,7 +10,7 @@
             <HorizontalStackLayout>
                 <Label
                     Text="Team #:"
-                    WidthRequest="75"
+                    WidthRequest="85"
                     />
                 <Entry
                     x:Name="Team_Num"
@@ -145,7 +145,7 @@
             <HorizontalStackLayout>
                 <Label
                     Text="Max Fuel Capacity?" 
-                    WidthRequest="150"
+                    WidthRequest="175"
                     />
                 <Entry
                      x:Name="Max_Fuel"
@@ -159,7 +159,7 @@
             <HorizontalStackLayout>
                 <Label
                     Text="Can You Climb?"   
-                    WidthRequest="150"
+                    WidthRequest="145"
                     />
                 <Button
                     x:Name="Can_Climb_Yes"
@@ -177,7 +177,7 @@
             <HorizontalStackLayout>
                 <Label
                     Text="What Level?"   
-                    WidthRequest="125"
+                    WidthRequest="110"
                     />
                 <Button
                     x:Name="Climb_Level_1"
@@ -207,7 +207,7 @@
             <HorizontalStackLayout>
                 <Label
                     Text="Middle or Side Climb?"  
-                    WidthRequest="175"
+                    WidthRequest="185"
                     />
                 <Button
                     x:Name="Climb_Loc_Middle"
@@ -237,7 +237,7 @@
             <HorizontalStackLayout>
                 <Label
                     Text="What Are Your Strengths?"
-                    WidthRequest="200"
+                    WidthRequest="210"
                     />
                 <Entry
                     Text=""
@@ -248,7 +248,7 @@
             <HorizontalStackLayout>
                 <Label
                     Text="What's Your Fuel/Points Per Second?"   
-WidthRequest="275"
+WidthRequest="260"
                     />
                 <Entry
                     x:Name="Fps"
@@ -282,6 +282,30 @@ WidthRequest="275"
                     Clicked="Travel_Route_Both_Clicked"
                     BackgroundColor="Gray"
                     /> -->
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label
+                    Text="Human Player Accuracy?"
+                    WidthRequest="210"
+                    />
+                <Button
+                        x:Name="Human_Acc_Low"
+                        Text="Low"
+                        Clicked="Human_Acc_Low_Clicked"
+                        BackgroundColor="Gray"
+                        />
+                <Button
+                    x:Name="Human_Acc_Med"
+                    Text="Medium"
+                    Clicked="Human_Acc_Med_Clicked"
+                    BackgroundColor="Gray"
+                    />
+                <Button
+                    x:Name="Human_Acc_High"
+                    Text="High"
+                    Clicked="Human_Acc_High_Clicked"
+                    BackgroundColor="Gray"
+                    />
             </HorizontalStackLayout>
             <Grid
                 HorizontalOptions="Fill" >

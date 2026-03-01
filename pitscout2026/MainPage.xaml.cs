@@ -206,6 +206,20 @@ namespace pitscout2026
         //{
         //    Set_Climb_Loc(0);
         //}
+        private void Human_Acc_Low_Clicked(object sender, EventArgs e)
+        {
+            Set_Human_Acc(1);
+        }
+
+        private void Human_Acc_Med_Clicked(object sender, EventArgs e)
+        {
+            Set_Human_Acc(2);
+        }
+
+        private void Human_Acc_High_Clicked(object sender, EventArgs e)
+        {
+            Set_Human_Acc(3);
+        }
 
         #region setRoutines
         private void Set_Drive_Train(int value)
@@ -290,6 +304,13 @@ namespace pitscout2026
             pitscout.Climb_Loc_Side = value;
             Climb_Loc_Side.BackgroundColor = value ? Colors.Green : Colors.Grey;
         }
+        private void Set_Human_Acc(int value)
+        {
+            pitscout.Human_Acc = value;
+            Human_Acc_Low.BackgroundColor = value == 1 ? Colors.Green : Colors.Gray;
+            Human_Acc_Med.BackgroundColor = value == 2 ? Colors.Green : Colors.Gray;
+            Human_Acc_High.BackgroundColor = value == 3 ? Colors.Green : Colors.Gray;
+        }
 
         #endregion
 
@@ -297,5 +318,7 @@ namespace pitscout2026
         {
             pitscout.Comments = Comments.Text;
         }
+
+
     }
 }
