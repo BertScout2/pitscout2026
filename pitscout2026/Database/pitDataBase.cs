@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.Data.Sqlite;
+﻿using Microsoft.Data.Sqlite;
 using pitscout2026.Models;
 
 namespace pitscout2026.Database
 {
-    public class pitDataBase
+    public class PitDataBase
     {
         private const string PitDBFilename = "PitScoutThe2026.db3";
         private SqliteConnection Database = new();
         private string? databasePath;
         private bool created = false;
 
-        public pitDataBase()
+        public PitDataBase()
         {
         }
         public async Task Init()

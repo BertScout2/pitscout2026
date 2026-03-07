@@ -6,7 +6,7 @@ namespace pitscout2026
     public partial class MainPage : ContentPage
     {
         private readonly PitScout pitscout = new();
-        private readonly pitDataBase db = new();
+        private readonly PitDataBase db = new();
 
         public MainPage()
         {
