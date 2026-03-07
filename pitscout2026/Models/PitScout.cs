@@ -5,7 +5,7 @@ namespace pitscout2026.Models
     public class PitScout : BaseModel
     {
 
-        private const string TableName = "PitScout";
+        public const string TableName = "PitScout";
 
         public int Team_Num { get; set; } = 0;
         public int Drive_Train { get; set; } = 0;
@@ -26,6 +26,7 @@ namespace pitscout2026.Models
         public bool Travel_Route_Under { get; set; } = false;
         public int Human_Acc { get; set; } = 0;
         public string Comments { get; set; } = string.Empty;
+
         public static string CreateTableCommand()
         {
             return
@@ -53,6 +54,7 @@ namespace pitscout2026.Models
                 PRIMARY KEY(Id AUTOINCREMENT)
                 );";
         }
+
         public static string PitscoutFields()
         {
             return
@@ -77,6 +79,14 @@ namespace pitscout2026.Models
                 Human_Acc ,
                 Comments ";
         }
+
+        public static string PitScoutFieldsWithId()
+        {
+            return
+                @$"{BaseFieldsWithID()}
+                , {PitscoutFields()}";
+        }
+
         public string AddCommand()
         {
             return

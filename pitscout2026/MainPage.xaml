@@ -13,8 +13,8 @@
                     WidthRequest="85"
                     />
                 <Entry
-                    x:Name="Team_Num"
-                   Text=""
+                    x:Name="Team_Num_Entry"
+                    Text=""
                     WidthRequest="75"
                     MaxLength="5"
                     Keyboard="Numeric"
@@ -31,12 +31,6 @@
                     x:Name="Save_But"
                     Text="Save"
                     Clicked="Save_But_Clicked"
-                    BackgroundColor="Gray"
-                    />
-                <Button
-                    x:Name="Init_Data"
-                    Text="Init Database"
-                    Clicked="Init_Data_Clicked"
                     BackgroundColor="Gray"
                     />
             </HorizontalStackLayout>
@@ -219,18 +213,6 @@
                     Clicked="Climb_Loc_Side_Clicked"
                     BackgroundColor="Gray"
                     />
-                <!--<Button
-                    x:Name="Climb_Loc_Both"
-                    Text="Both"
-                    Clicked="Climb_Loc_Both_Clicked"
-                    BackgroundColor="Gray"
-                    />
-                <Button
-                    x:Name="Climb_Loc_None"
-                    Text="None"
-                    Clicked="Climb_Loc_None_Clicked"
-                    BackgroundColor="Gray"
-                    /> -->
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
@@ -238,6 +220,7 @@
                     WidthRequest="210"
                     />
                 <Entry
+                    x:Name="Strengths"
                     Text=""
                     WidthRequest="250"
                     MaxLength="100"
@@ -247,7 +230,7 @@
             <HorizontalStackLayout>
                 <Label
                     Text="What's Your Fuel/Points Per Second?"   
-WidthRequest="275"
+                    WidthRequest="275"
                     />
                 <Entry
                     x:Name="Fps"
@@ -275,12 +258,6 @@ WidthRequest="275"
                     Clicked="Travel_Route_Under_Clicked"
                     BackgroundColor="Gray"
                     />
-                <!-- <Button
-                    x:Name="Travel_Route_Both"
-                    Text="Both"
-                    Clicked="Travel_Route_Both_Clicked"
-                    BackgroundColor="Gray"
-                    /> -->
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label
