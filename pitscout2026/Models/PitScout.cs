@@ -50,8 +50,7 @@ namespace pitscout2026.Models
                 Travel_Route_Over INTEGER,
                 Travel_Route_Under INTEGER,
                 Human_Acc INTEGER,
-                Comments TEXT,
-                PRIMARY KEY(Id AUTOINCREMENT)
+                Comments TEXT
                 );";
         }
 
