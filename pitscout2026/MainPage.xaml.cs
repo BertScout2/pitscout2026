@@ -11,10 +11,15 @@ namespace pitscout2026
         public MainPage()
         {
             InitializeComponent();
+            Team_Num_Entry.Focus();
         }
 
         private void Team_Num_TextChanged(object? sender, TextChangedEventArgs e)
         {
+            if (string.IsNullOrEmpty(Team_Num_Entry.Text))
+            {
+                return;
+            }
             if (int.TryParse(Team_Num_Entry.Text, out int result))
             {
                 if (pitscout.Team_Num != result)
@@ -35,6 +40,11 @@ namespace pitscout2026
             {
                 return;
             }
+            Load_But.IsEnabled = false;
+            Load_But.IsVisible = false;
+            Save_But.IsEnabled = true;
+            Save_But.IsVisible = true;
+            PitScoutLayout.IsVisible = true;
             var task = Task.Run(() => db.GetPitScoutAsync(team));
             var oldItem = task.Result;
             if (oldItem == null)
@@ -55,6 +65,13 @@ namespace pitscout2026
         {
             var taskSave = Task.Run(() => db.SavePitScoutItemAsync(pitscout));
             taskSave.Wait();
+            ClearFields();
+            Load_But.IsEnabled = true;
+            Load_But.IsVisible = true;
+            Save_But.IsEnabled = false;
+            Save_But.IsVisible = false;
+            PitScoutLayout.IsVisible = false;
+            Team_Num_Entry.Focus();
         }
 
         private void Drive_Train_Swerve_Clicked(object? sender, EventArgs e)
@@ -325,6 +342,29 @@ namespace pitscout2026
             Set_Travel_Route_Under(pitscout.Travel_Route_Under);
             Set_Human_Acc(pitscout.Human_Acc);
             Comments.Text = pitscout.Comments;
+        }
+
+        private void ClearFields()
+        {
+            Team_Num_Entry.Text = "";
+            Set_Drive_Train(0);
+            Set_Preferred_Placement_Left(false);
+            Set_Preferred_Placement_Middle(false);
+            Set_Preferred_Placement_Right(false);
+            Set_Auto_Climb(false);
+            Set_Auto_Shoot(false);
+            Best_Auto.Text = "";
+            Max_Fuel.Text = "";
+            Set_Can_Climb(false);
+            Set_Climb_Level(0);
+            Set_Climb_Loc_Middle(false);
+            Set_Climb_Loc_Side(false);
+            Strengths.Text = "";
+            Fps.Text = "";
+            Set_Travel_Route_Over(false);
+            Set_Travel_Route_Under(false);
+            Set_Human_Acc(0);
+            Comments.Text = "";
         }
     }
 }
