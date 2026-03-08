@@ -14,8 +14,8 @@
             </Grid.RowDefinitions>
 
             <VerticalStackLayout
-                    Margin="10,0,0,0"
-                    Grid.Row="0"
+                Margin="10,0,0,0"
+                Grid.Row="0"
                 >
                 <HorizontalStackLayout>
                     <Label
@@ -55,11 +55,11 @@
             </VerticalStackLayout>
 
             <VerticalStackLayout
-                    x:Name="PitScoutLayout"
-                    Grid.Row="1"
-                    IsVisible="false"
-                    Margin="10,0,0,0"
-                    >
+                x:Name="PitScoutLayout"
+                Grid.Row="1"
+                IsVisible="false"
+                Margin="10,0,0,0"
+                >
                 <HorizontalStackLayout>
                     <Label
                         Text="What Is Your Drive Train?" 
@@ -91,30 +91,30 @@
                 </HorizontalStackLayout>
                 <HorizontalStackLayout>
                     <Label
-                       Text="Preferred Placement on the Field?"  
+                        Text="Preferred Placement on the Field?"  
                         WidthRequest="250"
                         Padding="0,10,0,0"
-                       />
+                        />
                     <Button
                         x:Name="Preferred_Placement_Left"
-                       Text="Left"
+                        Text="Left"
                         Clicked="Preferred_Placement_Left_Clicked"
                         BackgroundColor="Gray"
-                       />
+                        />
                     <Button
                         x:Name="Preferred_Placement_Middle"
-                       Text="Middle"
+                        Text="Middle"
                         Clicked="Preferred_Placement_Middle_Clicked"
                         BackgroundColor="Gray"
                         Margin="10,0,0,0"
-                       />
+                        />
                     <Button
                         x:Name="Preferred_Placement_Right"
-                       Text="Right"
+                        Text="Right"
                         Clicked="Preferred_Placement_Right_Clicked"
                         BackgroundColor="Gray"
                         Margin="10,0,0,0"
-                       />
+                        />
                 </HorizontalStackLayout>
                 <HorizontalStackLayout>
                     <Label
@@ -347,7 +347,7 @@
                         Placeholder="Put in Comments..."
                         HorizontalOptions="Fill"
                         MaxLength="250"
-                            HeightRequest="150"
+                        HeightRequest="150"
                         Margin="0,5,10,10"
                         Text=""
                         IsEnabled="True"
