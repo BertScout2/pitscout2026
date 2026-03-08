@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-
-namespace pitscout2026
+﻿namespace pitscout2026
 {
     public partial class App : Application
     {

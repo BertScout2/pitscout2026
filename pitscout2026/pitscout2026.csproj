@@ -33,7 +33,7 @@
 		<ApplicationTitle>pitscout2026</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.pitscout2026</ApplicationId>
+		<ApplicationId>com.BertRobotics.pitscout2026</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -75,6 +75,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="AboutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="AirtablePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

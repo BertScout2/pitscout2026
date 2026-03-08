@@ -8,10 +8,10 @@
     Shell.FlyoutBehavior="Flyout"
     Title="Pit Scout 2026">
 
-    <FlyoutItem Title="Stand Scouting">
+    <FlyoutItem Title="Pit Scouting">
         <Tab>
             <ShellContent
-                Title="Home"
+                Title="Pit Scouting"
                 ContentTemplate="{DataTemplate local:MainPage}"
                 />
         </Tab>
@@ -19,10 +19,23 @@
 
     <FlyoutItem Title="Airtable">
         <Tab>
+
             <ShellContent
-                Title="Airtable"
-                ContentTemplate="{DataTemplate local:AirtablePage}"
+             Title="Airtable"
+             ContentTemplate="{DataTemplate local:AirtablePage}"
+             />
+        </Tab>
+
+    </FlyoutItem>
+
+    <FlyoutItem Title="About">
+        <Tab>
+
+            <ShellContent
+                Title="About"
+                ContentTemplate="{DataTemplate local:AboutPage}"
                 />
         </Tab>
+        
     </FlyoutItem>
 </Shell>
