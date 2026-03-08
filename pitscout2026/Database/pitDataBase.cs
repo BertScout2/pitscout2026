@@ -57,6 +57,25 @@ public class PitDataBase : BaseDatabase
         return null;
     }
 
+    public async Task<List<PitScout>> GetPitItemsAsync()
+    {
+        await Init();
+        await Database.OpenAsync();
+        var selectCmd = Database.CreateCommand();
+        selectCmd.CommandText =
+            @$"SELECT
+            {PitScout.PitScoutFieldsWithId()}
+            FROM {TableName}
+            ORDER BY MatchNumber";
+        await using var reader = await selectCmd.ExecuteReaderAsync();
+        var pitItems = new List<PitScout>();
+        while (await reader.ReadAsync())
+        {
+            pitItems.Add(PitScout.FromReader(reader));
+        }
+        return pitItems;
+    }
+
     public async Task<int> SavePitScoutItemAsync(PitScout item)
     {
         await Init();
