@@ -4,9 +4,32 @@
              x:Class="pitscout2026.AboutPage"
              Title="About">
     <VerticalStackLayout>
+
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="About!"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            FontSize="{OnPlatform WinUI=Small, Android=Medium}"
+            />
+
+        <Label 
+            Text="This is a program for scouting in the pits during robotics events."
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="{OnPlatform WinUI=Small, Android=Medium}"
+            />
+
+        <Label
+            Text="Version 2026.03.08"
+            HorizontalOptions="Center"
+            FontSize="{OnPlatform WinUI=Small, Android=Medium}"
+            />
+
+        <Label
+            Text="Written by Evan and Scott"
+            HorizontalOptions="Center"
+            FontSize="{OnPlatform WinUI=Small, Android=Medium}"
+            />
+
     </VerticalStackLayout>
 </ContentPage>
