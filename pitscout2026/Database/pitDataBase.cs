@@ -66,7 +66,7 @@ public class PitDataBase : BaseDatabase
             @$"SELECT
             {PitScout.PitScoutFieldsWithId()}
             FROM {TableName}
-            ORDER BY MatchNumber";
+            ORDER BY Team_Num";
         await using var reader = await selectCmd.ExecuteReaderAsync();
         var pitItems = new List<PitScout>();
         while (await reader.ReadAsync())

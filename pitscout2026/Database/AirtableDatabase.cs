@@ -18,12 +18,12 @@ public class AirtableDatabase
     // identifier for Airtable BertScout2026 database ("base")
     private const string AIRTABLE_BASE = "appZplIjMnsIy50Ku";
     // identifier for Airtable BertScout2026 "PitScout" table
-    private const string AIRTABLE_TABLE = "???";
+    private const string AIRTABLE_PITSCOUT_TABLE = "tbl00fuUfHWfLG9Zu";
 
     // Token is encrypted base64 to avoid GitHub searches for plain text Airtable
     // tokens. Not great, but better than an unencrypted string. Any symetrical
     // encryption/decryption will do as well.
-    private const string AIRTABLE_TOKEN_BASE64 = "???";
+    private const string AIRTABLE_TOKEN_BASE64 = "cGF0WjJKR05Kak80VXE2SEEuNWQ5YzFkZWQyM2Q1NzAwNTgyMTJkYjUzYWYzZTY1MDBhNzgyZGI2Mzg4NzRkMjVmN2QzMTEzZTI4NjBjYTdhNA==";
     // unencrypted value only in memory
     private static string AIRTABLE_TOKEN = "";
 
@@ -45,13 +45,13 @@ public class AirtableDatabase
         List<IdFields> updatedRecordList = [];
         FieldInfo[] myFieldInfo;
 
-        // apparently matchType.GetFields() does not include BaseFields, so get separately and combine
-        Type matchType = typeof(PitScout);
+        // apparently pitType.GetFields() does not include BaseFields, so get separately and combine
+        Type pitType = typeof(PitScout);
         Type baseType = typeof(Models.BaseModel);
-        var matchList = matchType.GetFields(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance).ToList();
+        var pitList = pitType.GetFields(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance).ToList();
         var baseList = baseType.GetFields(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance).ToList();
-        matchList.AddRange(baseList);
-        myFieldInfo = [.. matchList];
+        pitList.AddRange(baseList);
+        myFieldInfo = [.. pitList];
 
         using AirtableBase airtableBase = new(AirtableToken(), AIRTABLE_BASE);
 
@@ -145,7 +145,7 @@ public class AirtableDatabase
     private static async Task<int> AirtableSendNewRecords(
         AirtableBase airtableBase,
         List<Fields> newRecordList,
-        List<PitScout> matches)
+        List<PitScout> pitItems)
     {
         AirtableCreateUpdateReplaceMultipleRecordsResponse result;
         List<Fields> sendList = [];
@@ -158,7 +158,7 @@ public class AirtableDatabase
                 sendList.Add(newRecordList[0]);
                 newRecordList.RemoveAt(0);
             } while (newRecordList.Count > 0 && sendList.Count < 10);
-            result = await airtableBase.CreateMultipleRecords(AIRTABLE_TABLE, sendList.ToArray());
+            result = await airtableBase.CreateMultipleRecords(AIRTABLE_PITSCOUT_TABLE, sendList.ToArray());
             if (result == null || !result.Success)
             {
                 return finalCount; // some may have sent
@@ -166,12 +166,12 @@ public class AirtableDatabase
             foreach (AirtableRecord rec in result.Records ?? [])
             {
                 var uuid = rec.GetField("Uuid")?.ToString() ?? "";
-                foreach (PitScout match in matches
+                foreach (PitScout item in pitItems
                     .Where(x => x.Uuid.Equals(uuid, StringComparison.OrdinalIgnoreCase)))
                 {
                     // Airtable sends back its own "Id" field which we save in AirtableId
-                    match.AirtableId = rec.Id ?? "";
-                    match.Changed = true;
+                    item.AirtableId = rec.Id ?? "";
+                    item.Changed = true;
                     finalCount++;
                 }
             }
@@ -201,7 +201,7 @@ public class AirtableDatabase
                 sendList.Add(updatedRecordList[0]);
                 updatedRecordList.RemoveAt(0);
             } while (updatedRecordList.Count > 0 && sendList.Count < 10);
-            result = await airtableBase.UpdateMultipleRecords(AIRTABLE_TABLE, sendList.ToArray());
+            result = await airtableBase.UpdateMultipleRecords(AIRTABLE_PITSCOUT_TABLE, sendList.ToArray());
             if (!result.Success)
             {
                 return finalCount; // some may have sent

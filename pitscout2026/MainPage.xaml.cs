@@ -77,34 +77,43 @@ public partial class MainPage : ContentPage
     private void Drive_Train_Swerve_Clicked(object? sender, EventArgs e)
     {
         Set_Drive_Train(1);
+        pitscout.Drive_Train_Other = "";
+        Drive_Train_Other.Text = "";
     }
-
 
     private void Drive_Train_Tank_Clicked(object? sender, EventArgs e)
     {
         Set_Drive_Train(2);
+        pitscout.Drive_Train_Other = "";
+        Drive_Train_Other.Text = "";
     }
-    private void Drive_Train_Write_TextChanged(object? sender, TextChangedEventArgs e)
+
+    private void Drive_Train_Other_TextChanged(object? sender, TextChangedEventArgs e)
     {
-        Set_Drive_Train(0);
+        if (Drive_Train_Other.Text == "") return;
+        if (pitscout.Drive_Train_Other != Drive_Train_Other.Text)
+        {
+            Set_Drive_Train(0);
+            pitscout.Drive_Train_Other = Drive_Train_Other.Text;
+        }
     }
 
     private void Preferred_Placement_Left_Clicked(object? sender, EventArgs e)
     {
-        pitscout.Preferred_Placement_Left = !pitscout.Preferred_Placement_Left;
-        Set_Preferred_Placement_Left(pitscout.Preferred_Placement_Left);
+        pitscout.Start_Left = !pitscout.Start_Left;
+        Set_Preferred_Placement_Left(pitscout.Start_Left);
     }
 
     private void Preferred_Placement_Middle_Clicked(object? sender, EventArgs e)
     {
-        pitscout.Preferred_Placement_Middle = !pitscout.Preferred_Placement_Middle;
-        Set_Preferred_Placement_Middle(pitscout.Preferred_Placement_Middle);
+        pitscout.Start_Middle = !pitscout.Start_Middle;
+        Set_Preferred_Placement_Middle(pitscout.Start_Middle);
     }
 
     private void Preferred_Placement_Right_Clicked(object? sender, EventArgs e)
     {
-        pitscout.Preferred_Placement_Right = !pitscout.Preferred_Placement_Right;
-        Set_Preferred_Placement_Right(pitscout.Preferred_Placement_Right);
+        pitscout.Start_Right = !pitscout.Start_Right;
+        Set_Preferred_Placement_Right(pitscout.Start_Right);
     }
 
     private void Auto_Climb_Yes_Clicked(object? sender, EventArgs e)
@@ -247,18 +256,18 @@ public partial class MainPage : ContentPage
     }
     private void Set_Preferred_Placement_Left(bool value)
     {
-        pitscout.Preferred_Placement_Left = value;
-        Preferred_Placement_Left.BackgroundColor = value ? Colors.Green : Colors.Gray;
+        pitscout.Start_Left = value;
+        Start_Left.BackgroundColor = value ? Colors.Green : Colors.Gray;
     }
     private void Set_Preferred_Placement_Middle(bool value)
     {
-        pitscout.Preferred_Placement_Middle = value;
-        Preferred_Placement_Middle.BackgroundColor = value ? Colors.Green : Colors.Gray;
+        pitscout.Start_Middle = value;
+        Start_Middle.BackgroundColor = value ? Colors.Green : Colors.Gray;
     }
     private void Set_Preferred_Placement_Right(bool value)
     {
-        pitscout.Preferred_Placement_Right = value;
-        Preferred_Placement_Right.BackgroundColor = value ? Colors.Green : Colors.Gray;
+        pitscout.Start_Right = value;
+        Start_Right.BackgroundColor = value ? Colors.Green : Colors.Gray;
     }
     private void Set_Auto_Climb(bool value)
     {
@@ -326,9 +335,10 @@ public partial class MainPage : ContentPage
     private void FillFields()
     {
         Set_Drive_Train(pitscout.Drive_Train);
-        Set_Preferred_Placement_Left(pitscout.Preferred_Placement_Left);
-        Set_Preferred_Placement_Middle(pitscout.Preferred_Placement_Middle);
-        Set_Preferred_Placement_Right(pitscout.Preferred_Placement_Right);
+        Drive_Train_Other.Text = pitscout.Drive_Train_Other;
+        Set_Preferred_Placement_Left(pitscout.Start_Left);
+        Set_Preferred_Placement_Middle(pitscout.Start_Middle);
+        Set_Preferred_Placement_Right(pitscout.Start_Right);
         Set_Auto_Climb(pitscout.Auto_Climb);
         Set_Auto_Shoot(pitscout.Auto_Shoot);
         Best_Auto.Text = pitscout.Auto_Best;
@@ -349,6 +359,7 @@ public partial class MainPage : ContentPage
     {
         Team_Num_Entry.Text = "";
         Set_Drive_Train(0);
+        Drive_Train_Other.Text = "";
         Set_Preferred_Placement_Left(false);
         Set_Preferred_Placement_Middle(false);
         Set_Preferred_Placement_Right(false);

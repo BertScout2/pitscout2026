@@ -82,11 +82,11 @@
                         Margin="10,0,0,0"
                        />
                     <Entry
-                        x:Name="Drive_Train_Write"
+                        x:Name="Drive_Train_Other"
                         Text=""
                         WidthRequest="180"
                         MaxLength="100"
-                        TextChanged="Drive_Train_Write_TextChanged"
+                        TextChanged="Drive_Train_Other_TextChanged"
                         Placeholder="Other..."
                         Margin="10,0,0,0"
                         />
@@ -98,22 +98,22 @@
                         Padding="0,10,0,0"
                         />
                     <Button
-                        x:Name="Preferred_Placement_Left"
+                        x:Name="Start_Left"
                         Text="Left"
-                        Clicked="Preferred_Placement_Left_Clicked"
+                        Clicked="Start_Left_Clicked"
                         BackgroundColor="Gray"
                         />
                     <Button
-                        x:Name="Preferred_Placement_Middle"
+                        x:Name="Start_Middle"
                         Text="Middle"
-                        Clicked="Preferred_Placement_Middle_Clicked"
+                        Clicked="Start_Middle_Clicked"
                         BackgroundColor="Gray"
                         Margin="10,0,0,0"
                         />
                     <Button
-                        x:Name="Preferred_Placement_Right"
+                        x:Name="Start_Right"
                         Text="Right"
-                        Clicked="Preferred_Placement_Right_Clicked"
+                        Clicked="Start_Right_Clicked"
                         BackgroundColor="Gray"
                         Margin="10,0,0,0"
                         />

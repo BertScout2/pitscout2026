@@ -9,9 +9,10 @@ public class PitScout : BaseModel
 
     public int Team_Num { get; set; } = 0;
     public int Drive_Train { get; set; } = 0;
-    public bool Preferred_Placement_Left { get; set; } = false;
-    public bool Preferred_Placement_Middle { get; set; } = false;
-    public bool Preferred_Placement_Right { get; set; } = false;
+    public string Drive_Train_Other { get; set; } = "";
+    public bool Start_Left { get; set; } = false;
+    public bool Start_Middle { get; set; } = false;
+    public bool Start_Right { get; set; } = false;
     public bool Auto_Climb { get; set; } = false;
     public bool Auto_Shoot { get; set; } = false;
     public string Auto_Best { get; set; } = string.Empty;
@@ -34,9 +35,10 @@ public class PitScout : BaseModel
                {BaseCreateTableFields()},
                 Team_Num  INTEGER,
                 Drive_Train INTEGER,
-                Preferred_Placement_Left INTEGER,
-                Preferred_Placement_Middle INTEGER,
-                Preferred_Placement_Right INTEGER,
+                Drive_Train_Other TEXT,
+                Start_Left INTEGER,
+                Start_Middle INTEGER,
+                Start_Right INTEGER,
                 Auto_Climb INTEGER,
                 Auto_Shoot INTEGER,
                 Auto_Best TEXT,
@@ -60,9 +62,10 @@ public class PitScout : BaseModel
            @"
                 Team_Num  ,
                 Drive_Train ,
-                Preferred_Placement_Left ,
-                Preferred_Placement_Middle ,
-                Preferred_Placement_Right ,
+                Drive_Train_Other ,
+                Start_Left ,
+                Start_Middle ,
+                Start_Right ,
                 Auto_Climb ,
                 Auto_Shoot ,
                 Auto_Best ,
@@ -96,9 +99,10 @@ public class PitScout : BaseModel
                 {BaseAddValues()},
                 {Team_Num}  ,
                 {Drive_Train} ,
-                {Preferred_Placement_Left} ,
-                {Preferred_Placement_Middle} ,
-                {Preferred_Placement_Right} ,
+               '{SQLInjectionFix(Drive_Train_Other)}' ,
+                {Start_Left} ,
+                {Start_Middle} ,
+                {Start_Right} ,
                 {Auto_Climb} ,
                 {Auto_Shoot} ,
                '{SQLInjectionFix(Auto_Best)}' ,
@@ -124,9 +128,10 @@ public class PitScout : BaseModel
                 {BaseUpdateValues()},
                 Team_Num = {Team_Num}  ,
                 Drive_Train = {Drive_Train} ,
-                Preferred_Placement_Left = {Preferred_Placement_Left} ,
-                Preferred_Placement_Middle = {Preferred_Placement_Middle} ,
-                Preferred_Placement_Right = {Preferred_Placement_Right} ,
+                Drive_Train_Other = '{SQLInjectionFix(Drive_Train_Other)}' ,
+                Start_Left = {Start_Left} ,
+                Start_Middle = {Start_Middle} ,
+                Start_Right = {Start_Right} ,
                 Auto_Climb = {Auto_Climb} ,
                 Auto_Shoot = {Auto_Shoot} ,
                 Auto_Best = '{SQLInjectionFix(Auto_Best)}' ,
@@ -150,23 +155,24 @@ public class PitScout : BaseModel
         item.BaseFromReader(reader);
         item.Team_Num = reader.GetInt32(BaseFieldCount);
         item.Drive_Train = reader.GetInt32(BaseFieldCount + 1);
-        item.Preferred_Placement_Left = reader.GetInt32(BaseFieldCount + 2) == 1;
-        item.Preferred_Placement_Middle = reader.GetInt32(BaseFieldCount + 3) == 1;
-        item.Preferred_Placement_Right = reader.GetInt32(BaseFieldCount + 4) == 1;
-        item.Auto_Climb = reader.GetInt32(BaseFieldCount + 5) == 1;
-        item.Auto_Shoot = reader.GetInt32(BaseFieldCount + 6) == 1;
-        item.Auto_Best = reader.GetString(BaseFieldCount + 7);
-        item.Max_Fuel = reader.GetInt32(BaseFieldCount + 8);
-        item.Can_Climb = reader.GetInt32(BaseFieldCount + 9) == 1;
-        item.Climb_Level = reader.GetInt32(BaseFieldCount + 10);
-        item.Climb_Loc_Side = reader.GetInt32(BaseFieldCount + 11) == 1;
-        item.Climb_Loc_Middle = reader.GetInt32(BaseFieldCount + 12) == 1;
-        item.Strength = reader.GetString(BaseFieldCount + 13);
-        item.Fps = reader.GetInt32(BaseFieldCount + 14);
-        item.Travel_Route_Over = reader.GetInt32(BaseFieldCount + 15) == 1;
-        item.Travel_Route_Under = reader.GetInt32(BaseFieldCount + 16) == 1;
-        item.Human_Acc = reader.GetInt32(BaseFieldCount + 17);
-        item.Comments = reader.GetString(BaseFieldCount + 18);
+        item.Drive_Train_Other = reader.GetString(BaseFieldCount + 2);
+        item.Start_Left = reader.GetInt32(BaseFieldCount + 3) == 1;
+        item.Start_Middle = reader.GetInt32(BaseFieldCount + 4) == 1;
+        item.Start_Right = reader.GetInt32(BaseFieldCount + 5) == 1;
+        item.Auto_Climb = reader.GetInt32(BaseFieldCount + 6) == 1;
+        item.Auto_Shoot = reader.GetInt32(BaseFieldCount + 7) == 1;
+        item.Auto_Best = reader.GetString(BaseFieldCount + 8);
+        item.Max_Fuel = reader.GetInt32(BaseFieldCount + 9);
+        item.Can_Climb = reader.GetInt32(BaseFieldCount + 10) == 1;
+        item.Climb_Level = reader.GetInt32(BaseFieldCount + 11);
+        item.Climb_Loc_Side = reader.GetInt32(BaseFieldCount + 12) == 1;
+        item.Climb_Loc_Middle = reader.GetInt32(BaseFieldCount + 13) == 1;
+        item.Strength = reader.GetString(BaseFieldCount + 14);
+        item.Fps = reader.GetInt32(BaseFieldCount + 15);
+        item.Travel_Route_Over = reader.GetInt32(BaseFieldCount + 16) == 1;
+        item.Travel_Route_Under = reader.GetInt32(BaseFieldCount + 17) == 1;
+        item.Human_Acc = reader.GetInt32(BaseFieldCount + 18);
+        item.Comments = reader.GetString(BaseFieldCount + 19);
         return item;
     }
 }

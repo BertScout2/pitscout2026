@@ -25,6 +25,7 @@
             WidthRequest="100"
             HeightRequest="50"
             HorizontalOptions="Center"
+            Clicked="AirtableSend_Clicked"
             />
 
         <HorizontalStackLayout
