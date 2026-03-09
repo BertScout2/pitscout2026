@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:DataType="ContentPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="pitscout2026.AirtablePage"
     xmlns:local="clr-namespace:pitscout2026"
+    x:DataType="local:GlobalViewModel"
     Title="Airtable"
     >
 

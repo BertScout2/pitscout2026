@@ -19,6 +19,8 @@ namespace pitscout2026
     		builder.Logging.AddDebug();
 #endif
 
+            builder.Services.AddSingleton<GlobalViewModel>(new GlobalViewModel());
+            
             return builder.Build();
         }
     }
