@@ -15,12 +15,14 @@
         <Label
             Text="Version 2026.03.10"
             HorizontalOptions="Center"
+            Margin="0,10,0,0"
             FontSize="{OnPlatform WinUI=Small, Android=Medium}"
             />
 
         <Label
             Text="Written by Evan, Ian, and Scott"
             HorizontalOptions="Center"
+            Margin="0,10,0,0"
             FontSize="{OnPlatform WinUI=Small, Android=Medium}"
             />
 

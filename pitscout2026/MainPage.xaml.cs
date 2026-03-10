@@ -254,7 +254,7 @@ public partial class MainPage : ContentPage
         Set_Climb_Loc_Side(pitscout.Climb_Loc_Side);
     }
 
-    private void Strengths_TextChanged(object sender, TextChangedEventArgs e)
+    private void Strengths_TextChanged(object? sender, TextChangedEventArgs e)
     {
         pitscout.Strength = Strengths.Text;
         SaveData();

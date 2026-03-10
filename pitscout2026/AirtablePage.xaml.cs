@@ -14,7 +14,7 @@ public partial class AirtablePage : ContentPage
         BindingContext = _global;
     }
 
-    private async void AirtableSend_Clicked(object sender, EventArgs e)
+    private async void AirtableSend_Clicked(object? sender, EventArgs e)
     {
         try
         {
