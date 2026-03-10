@@ -6,13 +6,6 @@
     <VerticalStackLayout>
 
         <Label 
-            Text="About!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            FontSize="{OnPlatform WinUI=Small, Android=Medium}"
-            />
-
-        <Label 
             Text="This is a program for scouting in the pits during robotics events."
             VerticalOptions="Center" 
             HorizontalOptions="Center"
@@ -20,13 +13,13 @@
             />
 
         <Label
-            Text="Version 2026.03.08"
+            Text="Version 2026.03.10"
             HorizontalOptions="Center"
             FontSize="{OnPlatform WinUI=Small, Android=Medium}"
             />
 
         <Label
-            Text="Written by Evan and Scott"
+            Text="Written by Evan, Ian, and Scott"
             HorizontalOptions="Center"
             FontSize="{OnPlatform WinUI=Small, Android=Medium}"
             />
