@@ -26,6 +26,9 @@ public class PitScout : BaseModel
     public bool Travel_Route_Over { get; set; } = false;
     public bool Travel_Route_Under { get; set; } = false;
     public int Human_Acc { get; set; } = 0;
+    public int Auto_Cycles { get; set; } = 0;
+    public bool Play_Defense { get; set; } = false;
+    public bool Will_Feed { get; set; } = false;
     public string Comments { get; set; } = string.Empty;
 
     public static string CreateTableCommand()
@@ -52,6 +55,9 @@ public class PitScout : BaseModel
                 Travel_Route_Over INTEGER,
                 Travel_Route_Under INTEGER,
                 Human_Acc INTEGER,
+                Auto_Cycles INTEGER,
+                Play_Defense INTEGER,
+                Will_Feed INTEGER,
                 Comments TEXT
                 );";
     }
@@ -79,6 +85,9 @@ public class PitScout : BaseModel
                 Travel_Route_Over ,
                 Travel_Route_Under ,
                 Human_Acc ,
+                Auto_Cycles ,
+                Play_Defense ,
+                Will_Feed ,
                 Comments ";
     }
 
@@ -116,6 +125,9 @@ public class PitScout : BaseModel
                 {Travel_Route_Over} ,
                 {Travel_Route_Under} ,
                 {Human_Acc} ,
+                {Auto_Cycles} ,
+                {Play_Defense} ,
+                {Will_Feed} ,
                '{SQLInjectionFix(Comments)}' 
                 )";
     }
@@ -145,6 +157,9 @@ public class PitScout : BaseModel
                 Travel_Route_Over = {Travel_Route_Over} ,
                 Travel_Route_Under = {Travel_Route_Under} ,
                 Human_Acc = {Human_Acc} ,
+                Auto_Cycles = {Auto_Cycles} ,
+                Play_Defense = {Play_Defense} ,
+                Will_Feed = {Will_Feed} ,
                 Comments = '{SQLInjectionFix(Comments)}' 
                 WHERE Id = {Id}";
     }
@@ -172,7 +187,10 @@ public class PitScout : BaseModel
         item.Travel_Route_Over = reader.GetInt32(BaseFieldCount + 16) == 1;
         item.Travel_Route_Under = reader.GetInt32(BaseFieldCount + 17) == 1;
         item.Human_Acc = reader.GetInt32(BaseFieldCount + 18);
-        item.Comments = reader.GetString(BaseFieldCount + 19);
+        item.Auto_Cycles = reader.GetInt32(BaseFieldCount + 19);
+        item.Play_Defense = reader.GetInt32(BaseFieldCount + 20) == 1;
+        item.Will_Feed = reader.GetInt32(BaseFieldCount + 21) == 1;
+        item.Comments = reader.GetString(BaseFieldCount + 22);
         return item;
     }
 }

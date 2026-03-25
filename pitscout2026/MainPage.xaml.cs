@@ -368,6 +368,21 @@ public partial class MainPage : ContentPage
         Human_Acc_Med.BackgroundColor = value == 2 ? Colors.Green : Colors.Gray;
         Human_Acc_High.BackgroundColor = value == 3 ? Colors.Green : Colors.Gray;
     }
+    private void Set_Play_Defense(bool value)
+    {
+        pitscout.Play_Defense = value;
+        SaveData();
+        Play_Defense_Yes.BackgroundColor = value ? Colors.Green : Colors.Gray;
+        Play_Defense_No.BackgroundColor = !value ? Colors.Green : Colors.Gray;
+    }
+    private void Set_Will_Feed(bool value)
+    {
+        pitscout.Will_Feed = value;
+        SaveData();
+        Will_Feed_Yes.BackgroundColor = value ? Colors.Green : Colors.Gray;
+        Will_Feed_No.BackgroundColor = !value ? Colors.Green : Colors.Gray;
+    }
+    
 
     #endregion
 
@@ -397,6 +412,9 @@ public partial class MainPage : ContentPage
         Set_Travel_Route_Over(pitscout.Travel_Route_Over);
         Set_Travel_Route_Under(pitscout.Travel_Route_Under);
         Set_Human_Acc(pitscout.Human_Acc);
+        Auto_Cycles.Text = pitscout.Auto_Cycles.ToString();
+        Set_Play_Defense(pitscout.Play_Defense);
+        Set_Will_Feed(pitscout.Will_Feed);
         Comments.Text = pitscout.Comments;
     }
 
@@ -421,6 +439,9 @@ public partial class MainPage : ContentPage
         Set_Travel_Route_Over(false);
         Set_Travel_Route_Under(false);
         Set_Human_Acc(0);
+        Auto_Cycles.Text = "";
+        Set_Play_Defense(false);
+        Set_Will_Feed(false);
         Comments.Text = "";
     }
 
@@ -435,5 +456,47 @@ public partial class MainPage : ContentPage
     {
         var taskSave = Task.Run(() => db.SavePitScoutItemAsync(pitscout));
         taskSave.Wait();
+    }
+
+    private void Auto_Cycles_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        if (string.IsNullOrEmpty(Auto_Cycles.Text)) return;
+        if (int.TryParse(Auto_Cycles.Text, out int result))
+        {
+            if (pitscout.Auto_Cycles != result)
+            {
+                pitscout.Auto_Cycles = result;
+                SaveData();
+                Auto_Cycles.Text = pitscout.Auto_Cycles.ToString();
+            }
+        }
+        else
+        {
+            Auto_Cycles.Text = pitscout.Auto_Cycles.ToString();
+        }
+    }
+
+    private void Play_Defense_No_Clicked(object sender, EventArgs e)
+    {
+        Set_Play_Defense(false);
+        SaveData();
+    }
+
+    private void Play_Defense_Yes_Clicked(object sender, EventArgs e)
+    {
+        Set_Play_Defense(true);
+        SaveData();
+    }
+
+    private void Will_Feed_No_Clicked(object sender, EventArgs e)
+    {
+        Set_Will_Feed(false);
+        SaveData();
+    }
+
+    private void Will_Feed_Yes_Clicked(object sender, EventArgs e)
+    {
+        Set_Will_Feed(true);
+        SaveData();
     }
 }

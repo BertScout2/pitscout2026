@@ -160,6 +160,21 @@
                 </HorizontalStackLayout>
                 <HorizontalStackLayout>
                     <Label
+                        Text="How many cycles in auto?" 
+                        WidthRequest="250"
+                        Padding="0,10,0,0"
+                        />
+                    <Entry
+                        x:Name="Auto_Cycles"
+                        Text=""
+                        WidthRequest="50"
+                        MaxLength="3"
+                        Keyboard="Numeric"
+                        TextChanged="Auto_Cycles_TextChanged"
+                        />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
                         Text="What's Your Best Auto?"
                         WidthRequest="250"
                         Padding="0,10,0,0"
@@ -264,11 +279,51 @@
                 </HorizontalStackLayout>
                 <HorizontalStackLayout>
                     <Label
+                        Text="Willing to play defense?" 
+                        WidthRequest="250"
+                        Padding="0,10,0,0"
+                        />
+                    <Button
+                        x:Name="Play_Defense_No"
+                        Text="No"
+                        Clicked="Play_Defense_No_Clicked"
+                        BackgroundColor="Gray"
+                        />
+                    <Button
+                        x:Name="Play_Defense_Yes"
+                        Text="Yes"
+                        Clicked="Play_Defense_Yes_Clicked"
+                        BackgroundColor="Gray"
+                        Margin="10,0,0,0"
+                        />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                <Label
+                        Text="Willing to feed?" 
+                        WidthRequest="250"
+                        Padding="0,10,0,0"
+                        />
+                <Button
+                        x:Name="Will_Feed_No"
+                        Text="No"
+                        Clicked="Will_Feed_No_Clicked"
+                        BackgroundColor="Gray"
+                        />
+                <Button
+                        x:Name="Will_Feed_Yes"
+                        Text="Yes"
+                        Clicked="Will_Feed_Yes_Clicked"
+                        BackgroundColor="Gray"
+                        Margin="10,0,0,0"
+                        />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                <Label
                         Text="What Are Your Strengths?"
                         WidthRequest="250"
                         Padding="0,10,0,0"
                         />
-                    <Entry
+                <Entry
                         x:Name="Strengths"
                         Text=""
                         WidthRequest="330"
