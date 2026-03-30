@@ -1,0 +1,37 @@
+﻿Id,Team_Num,Drive_Train,Drive_Train_Other,Start_Left,Start_Middle,Start_Right,Auto_Climb,Auto_Shoot,Auto_Best,Max_Fuel,Can_Climb,Climb_Level,Climb_Loc_Side,Climb_Loc_Middle,Strength,Fps,Travel_Route_Over,Travel_Route_Under,Human_Acc,Auto_Cycles,Play_Defense,Will_Feed,Comments
+50,58,1,,0,0,1,0,1,"venter, collect, shoots, over bump, shoots, human player station",25,0,0,0,0,"accurate shooting, LEDs to monitor shifts",5,0,1,2,1,1,1,
+51,69,1,,1,1,1,0,1,"center, collect, score, repeat",30,0,0,0,0,"auto A, shooter, speed, offense",8,0,1,2,2,1,1,
+52,172,1,,1,0,1,0,1,"2 scoop, swoop come back score than depo score",30,1,1,1,0,"feeding, shooting (turret) ",10,0,1,3,2,1,1,
+53,238,1,,1,0,1,0,1,"1 full cycle over bump, center, collect, score, over bump",70,0,0,0,0,"shooter speed, strong and reliable mechanics",6,1,0,2,1,1,1,
+54,509,1,,0,1,1,0,1,"right trench, scope, under trench, score",35,0,0,0,0,clean + shoot,12,1,1,2,1,1,1,medium-high
+55,811,1,,1,0,1,0,1,"trench, mid field, collect, score",25,0,0,0,0,shoot,0,0,1,3,1,1,1,
+56,1058,1,,1,0,1,0,1,"inner trench, center, collect, score, repeat",36,0,0,0,0,"shooting, feeding ",12,1,1,3,2,1,0,Not super willing to defend 
+57,1307,1,,0,1,0,0,1,"center, score preload ",30,1,1,1,0,"defense, shoot, L1",4,1,0,3,1,1,1,
+58,1350,1,,1,0,0,0,1,"core preload, depo score",25,0,0,0,0,"defense, feeder, assisted role",4,0,1,3,2,1,1,
+59,1512,1,,0,0,1,0,1,right trench cycle,25,0,0,0,0,"shooting, feeding, able to adapt well",0,0,1,3,1,1,1,Shooting cycle of 10 in 5 secs
+60,1721,1,,1,1,0,0,1,score preload,25,0,0,0,0,shooting ,5,0,1,2,1,1,1,
+61,1922,1,,0,0,1,0,1,"right side bump, middle dive",60,0,0,0,0,consistent scoring,6,1,0,2,1,0,1,Defense 50/50
+62,2523,1,,0,0,1,0,1,8 ball preload,30,1,1,1,0,"speed, reliable, accurate ",5,0,1,3,1,1,1,Less willing to feed
+63,2648,1,,1,0,1,0,1,"left side, middle sweep, score",90,0,0,0,0,shooting,8,1,0,2,1,1,1,Defense if needed 
+64,2712,1,,1,1,1,0,1,"right side trench, outpost, score",52,0,0,0,0,defense,4,1,0,3,1,1,1,
+65,3597,1,,0,0,0,0,0,NO AUTO,20,0,0,0,0,defense ,2,0,1,2,0,1,1,
+66,4034,1,,0,0,1,1,1,"center, score preload",15,1,1,1,0,"defense, shooting ",2,0,1,2,1,1,1,
+67,4041,2,,1,0,1,0,1,score 8 preload,15,0,0,0,0,"shoot, feed, defend, tank (less likely to be pushed)",3,1,1,3,1,1,1,
+68,4473,1,,1,1,1,0,1,"1 or 2 cycles, preload then collect again ",23,0,0,0,0,"Hooper fill quick, GOOD defense ",3,1,1,2,1,1,1,
+69,4546,1,,1,1,1,0,1,shoots preload,25,0,0,0,0,strong consistent intake and shooter,5,0,1,3,1,1,1,
+70,4564,1,,1,0,1,0,1,"left/right side, center collect about 30, score",50,0,0,0,0,shooting and intake ,8,0,1,3,1,1,1,
+71,4761,1,,1,0,1,0,1,"trench, center, collect, score",50,0,0,0,0,shooting,2,0,1,2,1,1,1,
+72,4925,1,,0,1,1,0,1,"depo, shoots 25",50,0,0,0,0,"vercital auto selection, fuel capacity ",4,1,1,3,1,1,1,
+73,5902,1,,1,0,1,0,1,"right/left double sweep, score",35,0,0,0,0,"feed, shoot accuracy, speed",5,0,1,3,2,1,1,
+74,6324,1,,1,0,1,0,1,"center sweep, score, repeat",50,0,0,0,0,"shooting, passing ",6,0,1,2,2,1,1,If absolutely necessary defense 
+75,6762,2,,0,1,0,0,0,NO AUTO ,0,0,0,0,0,shooting,0,0,1,2,0,1,1,
+76,6895,2,,0,0,0,0,0,NO auto,16,0,0,0,0,defense and feeding ,0,1,0,3,0,1,1,Shooter does not work
+77,7314,0,2 or and and a tank,1,1,1,0,1,grab and shoot,30,0,0,0,0,"shooting, feeding",3,0,1,2,1,0,1,
+78,7674,1,,1,0,0,0,1,"depo, score",50,0,0,0,0,intake and hooper,8,1,1,3,1,1,1,"Not practiced defense, bump preferred 55 balls in hooper"
+79,8046,1,,1,0,1,1,1,"center sweep, score full Hooper OR 2 full cycles",40,1,1,0,1,"shooting, feeding ",3,0,1,2,2,1,1,
+80,8410,1,,1,0,0,0,1,in the works ,48,0,0,0,0,"shooting, intake ",5,0,1,3,1,0,1,
+81,9055,1,,0,0,1,0,0,"1.5 cycle, right sweep ",30,0,0,0,0,intake ,2,0,1,1,1,0,1,"Defense is 50/50 preferably not, not consistent human player "
+82,9056,1,,1,1,1,0,0,in the works (tuning it),25,0,0,0,0,"speed, intake ",0,1,0,2,0,1,1,Seemed unsure about defense
+83,9443,1,,0,1,0,0,0,NO auto,47,0,0,0,0,"defense, feeding/herding ",0,1,0,3,0,1,1,
+84,11157,1,,0,1,0,0,1,score preload,15,0,0,0,0,"feed, defense",4,1,0,3,1,1,1,Only can go over
+85,11336,1,,0,1,0,0,0,NO AUTO,40,1,1,1,0,good at cycling ,1,1,1,3,0,1,1,12 Fuel Per second?
